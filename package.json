@@ -1,0 +1,27 @@
+{
+  "name": "express-mongoose-auto-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seifkowatli/express-mongoose-auto-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seifkowatli/express-mongoose-auto-crud/issues"
+  },
+  "homepage": "https://github.com/seifkowatli/express-mongoose-auto-crud#readme",
+  "dependencies": {
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "nodemon": "^1.19.4"
+  }
+}
