@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
     name: {
@@ -11,8 +11,8 @@ const itemSchema = new mongoose.Schema({
         unique: true
     }
 },{
-    timestamps: { 
-        createdAt: 'created_at', 
+    timestamps: {
+        createdAt: 'created_at',
         updatedAt : 'updated_at'
     }
 });

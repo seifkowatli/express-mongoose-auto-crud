@@ -2,7 +2,7 @@ const AbstractController =  require("./abstract");
 
 class Item extends AbstractController {
     constructor(model , options){
-        super(model , options); 
+        super(model , options);
     }
 
     // create (req, res){
@@ -14,7 +14,7 @@ class Item extends AbstractController {
     // }
 
     // getOne (req, res){
-        
+
     // }
 
     // editItem (req, res){
