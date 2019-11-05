@@ -1,29 +1,9 @@
-import AbstractController from './abstract'
+import AbstractController from '../lib/abstractController'
 
-class Item extends AbstractController {
+class Ctrl extends AbstractController {
   constructor(model, options) {
     super(model, options)
   }
-
-  // create (req, res){
-  //
-  // }
-  //
-  // getAll (req, res){
-  //
-  // }
-  //
-  // getOne (req, res){
-  //
-  // }
-  //
-  // editItem (req, res){
-  //
-  // }
-  //
-  // deleteItem (req, res){
-  //
-  // }
 }
 
-module.exports = new Item('item', {})
+module.exports = new Ctrl('Item')

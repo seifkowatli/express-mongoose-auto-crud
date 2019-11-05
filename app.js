@@ -3,6 +3,6 @@ const app = new express()
 
 app.use(express.json())
 
-app.use('/api/item', require('./api/routes/item'))
+app.use('/api/item', require('./demo/routes'))
 
 module.exports = app

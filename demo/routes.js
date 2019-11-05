@@ -1,10 +1,7 @@
 import express from 'express'
-import Item from '../controllers/item'
+import Ctrl from './controller'
 const router = express.Router()
 
-router.post('/', Item.create)
-router.get('/', function(req, res) {
-  res.send('hello world')
-})
+router.post('/', Ctrl.create)
 
 module.exports = router
