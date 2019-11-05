@@ -2,10 +2,11 @@
   "name": "express-mongoose-auto-crud",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start": "babel-node app.js --color",
+    "dev": "nodemon app.js --exec babel-node --color",
+    "lint": "eslint **/*.js --color"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,41 @@
   },
   "homepage": "https://github.com/seifkowatli/express-mongoose-auto-crud#readme",
   "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
     "config": "^3.2.4",
+    "eslint": "^5.16.0",
+    "eslint-config-rapid": "^0.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.7",
     "nodemon": "^1.19.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": "> 0.25%, not dead"
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "extends": "rapid",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
   }
 }
