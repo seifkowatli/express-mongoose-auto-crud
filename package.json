@@ -2,10 +2,10 @@
   "name": "express-mongoose-auto-crud",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "babel-node app.js --color",
-    "dev": "nodemon app.js --exec babel-node --color",
+    "start": "babel-node server.js --color",
+    "dev": "nodemon server.js --exec babel-node --color",
     "lint": "eslint **/*.js --color"
   },
   "repository": {
