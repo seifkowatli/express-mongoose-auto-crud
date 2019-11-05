@@ -4,6 +4,7 @@ const db = config.get('mongoURI')
 
 const connectDB = function() {
   mongoose.connect(db, {
+    useUnifiedTopology: true,
     useCreateIndex: true,
     useNewUrlParser: true
   })
@@ -11,9 +12,9 @@ const connectDB = function() {
   /* eslint-disable no-console */
   const database = mongoose.connection
   database.on('error', function() {
-    console.log(`Failed to connect to the \`${config.db.name}\` database`)
+    console.log('Failed to connect to the database')
   }).once('open', function() {
-    console.log(`Successfully connected to the \`${config.db.name}\` database`)
+    console.log('Successfully connected to the database')
   })
 }
 
