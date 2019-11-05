@@ -1,4 +1,4 @@
 {
-    "mongoURI" : "mongodb+srv://Seif:iTLWupKry7nVdO7x@cluster0-sp9vh.mongodb.net/test?retryWrites=true&w=majority",
-    "baseUrl" : "http://localhost:5000"
+  "mongoURI" : "mongodb+srv://Seif:iTLWupKry7nVdO7x@cluster0-sp9vh.mongodb.net/test?retryWrites=true&w=majority",
+  "baseUrl" : "http://localhost:5000"
 }

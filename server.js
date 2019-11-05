@@ -1,9 +1,10 @@
-const connecDB = require("./config/db");
-const app = require("./app");
+import connecDB from './config/db'
+import app from './app'
 
-// Connect to database
-connecDB();
+// connect to database
+connecDB()
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000
 
-app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+/* eslint-disable no-console */
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))

@@ -1,31 +1,29 @@
-const AbstractController =  require("./abstract");
+import AbstractController from './abstract'
 
 class Item extends AbstractController {
-    constructor(model , options){
-        super(model , options);
-    }
+  constructor(model, options) {
+    super(model, options)
+  }
 
-    // create (req, res){
-
-    // }
-
-    // getAll (req, res){
-
-    // }
-
-    // getOne (req, res){
-
-    // }
-
-    // editItem (req, res){
-
-    // }
-
-    // deleteItem (req, res){
-
-    // }
-
+  // create (req, res){
+  //
+  // }
+  //
+  // getAll (req, res){
+  //
+  // }
+  //
+  // getOne (req, res){
+  //
+  // }
+  //
+  // editItem (req, res){
+  //
+  // }
+  //
+  // deleteItem (req, res){
+  //
+  // }
 }
 
-
-module.exports = new Item('item' , {});
+module.exports = new Item('item', {})
