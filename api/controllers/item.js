@@ -1,31 +1,30 @@
-const AbstractController =  require("./abstract");
 
-class Item extends AbstractController {
-    constructor(model , options){
-        super(model , options); 
+class General {
+    constructor(name){
+        this.name = name;
     }
 
-    // create (req, res){
+    getData() {
+        console.log(this.name);
+    }
+}
 
-    // }
+class Handler extends General {
+    constructor(name){
+        super(name)
+    }
+}
 
-    // getAll (req, res){
+class Item  {
+    constructor(){
+    }
 
-    // }
-
-    // getOne (req, res){
-        
-    // }
-
-    // editItem (req, res){
-
-    // }
-
-    // deleteItem (req, res){
-
-    // }
-
+    getData(req, res) {
+        let handler = new Handler('Seif');
+        handler.getData();
+       res.json({msg : ' Successssss '});
+    }
 }
 
 
-module.exports = new Item('item' , {});
+module.exports =  new Item;
