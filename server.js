@@ -1,6 +1,8 @@
 const connecDB = require("./config/db");
 const app = require("./app");
 
+
+
 // Connect to database
 connecDB();
 

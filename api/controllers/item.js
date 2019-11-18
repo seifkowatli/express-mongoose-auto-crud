@@ -1,28 +1,28 @@
 
-class General {
-    constructor(name){
-        this.name = name;
-    }
-
-    getData() {
-        console.log(this.name);
-    }
-}
-
-class Handler extends General {
-    constructor(name){
-        super(name)
-    }
-}
+const Abstract = require('./abstract');
 
 class Item  {
     constructor(){
     }
 
     getData(req, res) {
-        let handler = new Handler('Seif');
-        handler.getData();
-       res.json({msg : ' Successssss '});
+        
+        try {
+            let data = {
+                model : 'item',
+                modelData :{
+                    name : 'Seif',
+                    email : 'something@someone.com'
+                }
+            }
+            let handler = new Abstract(req ,res , data);
+            handler.getData();
+            
+        } catch (error) {
+            res.status('500').json({
+                mag : error.message
+            });
+        }
     }
 }
 
