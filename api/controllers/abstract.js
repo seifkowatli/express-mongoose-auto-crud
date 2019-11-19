@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+//const item = require("../models/user")
 
 class Abstract {
     constructor(req, res, data = {}){
@@ -9,21 +10,24 @@ class Abstract {
     }
 
     async getData() {
-        
-        let item = mongoose.modelNames();
-        console.log(item);
 
-        // let item = require('../models/user');
+        const myModel = mongoose.model(this.model);
+        let users = await mongoose.model(this.model).find({});
 
-        // let myitem = new item ({
-        //     name :'sdfsdfsadfds' ,
-        //     email : 'asdff@dssdflkfsdfasdjsd.com'
-        // })
+        this.res.json({
+            msg: 'successfully',
+            data: users
+        });
+    }
+     async postData(){
 
-        // await myitem.save();
+        let newItem = new   mongoose.model(this.model)(this.data);
+        await newItem.save();
 
-        // console.log(this.name);
-        this.res.json({msg : 'succfull' , data :{} });
+        this.res.json({
+            msg: 'successfully',
+            data: newItem
+        });
     }
 }
 

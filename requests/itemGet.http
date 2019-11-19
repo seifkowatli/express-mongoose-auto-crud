@@ -2,8 +2,6 @@ get  http://localhost:5000/api/item/
 Content-Type: application/json
 
 {
-    "data" : {
-        "name" : "fdfsfsdf" ,
-        "email" :"something923@something.com"
-    }
+    "model":"User"
 }
+

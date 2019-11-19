@@ -6,6 +6,7 @@ const Item = require('../controllers/item');
 
 
 router.get('/' , Item.getData);
+router.post('/' , Item.postDate);
 
 
 module.exports = router;
