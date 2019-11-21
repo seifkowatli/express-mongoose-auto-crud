@@ -11,9 +11,9 @@ class Abstract {
 
     async getData() {
 
-        const myModel = mongoose.model(this.model);
-        let users = await mongoose.model(this.model).find({});
 
+        let users = await mongoose.model(this.model).find({});
+        
         this.res.json({
             msg: 'successfully',
             data: users
