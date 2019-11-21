@@ -9,6 +9,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
         unique: true
+    },
+    isConfirmed : {
+        type : Boolean,
+        default : false
     }
 },{
     timestamps: { 

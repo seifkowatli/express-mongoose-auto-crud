@@ -1,44 +1,41 @@
 
 const Abstract = require('./abstract');
+var data = {
+    model : 'User',
+    modelData : {}
+}
 
+const handler  = new Abstract(data)
 class Item  {
     constructor(){
     }
 
-    getData(req, res) {
-        
-        try {
-            let data = {
-                model : req.body.model,
-
-            }
-            let handler = new Abstract(req ,res , data);
-            handler.getData();
-            
-        } catch (error) {
-            res.status('500').json({
-                mag : error.message
-            });
-        }
+    get(req, res) {
+        handler.data.id =  req.params.id ? req.params.id   : null;
+        handler.get(req, res);
     }
 
-    postDate(req,res){
+    create(req,res){
+        let myData = req.body.modelData;
+        handler.data.modelData = {
+            name : myData.name,
+            email : myData.email,
+            isConfirmed : true 
+        };
 
-        try {
-            let data = {
-                model : req.body.model,
-                modelData : req.body.modelData
-            }
-            let handler = new Abstract(req ,res , data);
-            handler.postData();
-            
-        } catch (error) {
-            res.status('500').json({
-                mag : error.message
-            });
-        }
+        handler.create(req ,res);
     }
+
+    update(req,res){
+        handler.data.id =  req.params.id;
+        handler.update(req,res);
     }
+
+    delete(req,res){
+        handler.data.id =  req.params.id;
+        handler.delete(req,res);
+    }
+}
     
 
 

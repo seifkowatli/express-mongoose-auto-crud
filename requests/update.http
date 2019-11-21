@@ -1,0 +1,11 @@
+PATCH   http://localhost:5000/api/item/5dd455e06aee32229855a25b
+Content-Type: application/json
+
+{   
+    "props" :[
+        {
+            "key" : "name" ,
+            "value" : "Seif"
+        }
+    ]
+}

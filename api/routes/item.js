@@ -5,8 +5,9 @@ const router = express.Router();
 const Item = require('../controllers/item');
 
 
-router.get('/' , Item.getData);
-router.post('/' , Item.postDate);
-
+router.get('/:id?' , Item.get);
+router.post('/' , Item.create);
+router.patch('/:id' , Item.update);
+router.delete('/:id' , Item.delete);
 
 module.exports = router;
