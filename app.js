@@ -10,9 +10,11 @@ fs.readdirSync(models_path).forEach(function (file) {
 
 app.use(express.json());
 
-app.use('/api/routeGenerator' , require('./api/routes/routeGenerator'));
+app.use('/api/routeGenerator' , require('./api/routes/generator'));
 
 
 module.exports = app;
 
 
+
+ app.use('/api/Item' , require('./api/routes/Item'));
