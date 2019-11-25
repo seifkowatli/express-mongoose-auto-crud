@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const fs = require("fs");
 //const item = require("../models/user")
 
 class Abstract {
@@ -8,9 +9,10 @@ class Abstract {
     }
 
     async get(req, res) {
-        try {
-            const myModel = mongoose.model(this.model);
-            
+
+     
+
+        try {   
             let users = this.data.id 
                 ? await mongoose.model(this.model).findById(this.data.id) 
                 : await mongoose.model(this.model).find({});
@@ -110,6 +112,11 @@ class Abstract {
                 msg  : error.message
             });
         }
+    }
+    generateRoute(){
+        var global_data = fs.readFileSync("/api/routes/item.js").toString();
+        console.log(global_data);
+
     }
 }
 

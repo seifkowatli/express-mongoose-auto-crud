@@ -1,4 +1,4 @@
-get  http://localhost:5000/api/item/5dd455e06aee32229855a25b
+get  http://localhost:5000/api/item/
 Content-Type: application/json
 
 {
